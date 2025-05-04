@@ -3,18 +3,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Corpo */
-body {
+  }
+  
+  /* Corpo */
+  body {
     font-family: 'Minecraft', sans-serif;
     color: #fff;
     overflow-x: hidden;
     background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-}
-
-/* Botão "Voltar ao Topo" */
-#voltar-topo {
+  }
+  
+  /* Botão "Voltar ao Topo" */
+  #voltar-topo {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -26,43 +26,54 @@ body {
     border-radius: 8px;
     cursor: pointer;
     z-index: 999;
-    display: none; /* começa invisível */
+    display: none;
     opacity: 0.7;
-}
-
-#voltar-topo:hover {
+  }
+  
+  #voltar-topo:hover {
     opacity: 1;
-}
-
-/* Carrossel */
-.carrossel {
+  }
+  
+  /* Moldura do carrossel */
+  .carrossel-wrapper {
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    border: 4px solid #00f0ff;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #111;
+    box-shadow: 0 0 20px #00f0ff80;
+  }
+  
+  /* Carrossel */
+  .carrossel {
     position: relative;
-    width: 80%;
-    max-width: 1000px;
-    margin: 50px auto;
-}
-
-.slider-container {
+    width: 100%;
+  }
+  
+  .slider-container {
     overflow: hidden;
     border-radius: 12px;
-}
-
-.slider {
+  }
+  
+  .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
-}
-
-.slide {
+  }
+  
+  .slide {
     min-width: 100%;
     display: none;
     object-fit: cover;
-}
-
-.slide:first-child {
+  }
+  
+  .slide:first-child {
     display: block;
-}
-
-button {
+  }
+  
+  button.prev,
+  button.next {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
@@ -73,62 +84,73 @@ button {
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 2;
-}
-
-button.prev {
+  }
+  
+  button.prev {
     left: 0;
-}
-
-button.next {
+  }
+  
+  button.next {
     right: 0;
-}
-
-/* Seções principais */
-.grid-section {
+  }
+  
+  /* Intro Centralizada */
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Seções principais */
+  .grid-section {
     padding: 40px 20px;
     text-align: center;
-}
-
-.grid-section h2 {
-    margin-bottom: 30px; /* espaço entre título e cards */
+  }
+  
+  .grid-section h2 {
+    margin-bottom: 30px;
     font-size: 2.5rem;
     color: #00f0ff;
     text-shadow: 2px 2px 5px #000;
-}
-
-.card-grid {
+  }
+  
+  .card-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-}
-
-.card {
-    background: linear-gradient(145deg, #1a1a1a, #292929); /* Menos brilho */
+  }
+  
+  .card {
+    background: linear-gradient(145deg, #1a1a1a, #292929);
     padding: 20px;
     border-radius: 10px;
     color: #fff;
     text-align: center;
     font-size: 1.2rem;
-    box-shadow: 0 0 8px #00f0ff80; /* brilho mais suave */
+    box-shadow: 0 0 8px #00f0ff80;
     transition: all 0.3s ease;
     cursor: pointer;
-}
-
-.card:hover {
+  }
+  
+  .card:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 0 15px #00f0ff;
-}
-
-/* Menu de navegação */
-.versus-menu ul {
+  }
+  
+  /* Menu de navegação */
+  .versus-menu ul {
     display: flex;
     justify-content: center;
     gap: 20px;
     list-style: none;
     margin-top: 20px;
-}
-
-.menu-item {
+  }
+  
+  .menu-item {
     text-decoration: none;
     color: #00f0ff;
     font-size: 1.2rem;
@@ -138,10 +160,95 @@ button.next {
     transition: 0.3s;
     background: #111;
     box-shadow: 0 0 10px #00f0ff50;
-}
-
-.menu-item:hover {
+  }
+  
+  .menu-item:hover {
     background: #00f0ff;
     color: #111;
     box-shadow: 0 0 20px #00f0ff;
-}
+  }
+  
+  /* Responsividade para dispositivos móveis */
+  @media screen and (max-width: 768px) {
+    /* Ajustes do cabeçalho */
+    .logo {
+      font-size: 1.5em;
+    }
+  
+    nav.versus-menu ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    nav.versus-menu li {
+      display: block;
+      margin: 5px 0;
+    }
+  
+    .menu-item {
+      font-size: 1rem;
+      padding: 8px 15px;
+    }
+  
+    .intro h1 {
+      font-size: 2rem;
+    }
+  
+    .intro p {
+      font-size: 1.2rem;
+    }
+  
+    /* Ajuste do carrossel */
+    .carrossel-wrapper {
+      margin-top: 20px;
+    }
+  
+    .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .card {
+      font-size: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Ajustes de tamanho em telas pequenas */
+    .logo {
+      font-size: 1.2em;
+    }
+  
+    .intro h1 {
+      font-size: 1.5rem;
+    }
+  
+    .intro p {
+      font-size: 1rem;
+    }
+  
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .card {
+      font-size: 1rem;
+    }
+  
+    /* Ajustar os botões do carrossel */
+    button.prev,
+    button.next {
+      font-size: 1.5em;
+    }
+  
+    /* Ajustes para os botões do menu no mobile */
+    .menu-item {
+      font-size: 1rem;
+      padding: 8px 15px;
+    }
+  
+    nav.versus-menu ul {
+      padding-left: 0;
+    }
+  }
+  
