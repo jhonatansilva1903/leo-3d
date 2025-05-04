@@ -269,5 +269,26 @@
     background-color: #00c2d4;
     transform: scale(1.05);
   }
+  @media (max-width: 600px) {
+    .versus-menu ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 10px;
+    }
+  
+    .versus-menu li {
+      width: 48%;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    /* Garante que todos os botões tenham mesmo tamanho */
+    .menu-item {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
   
   
