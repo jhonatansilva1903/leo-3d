@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEO 3D</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Minecraft&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Botão de Voltar ao topo -->
+  <button id="voltar-topo" title="Voltar ao topo" style="display: none;">↑</button>
+  
+  <header>
+    <div class="logo">🕹️ LEO 3D 🕹️</div>
+    <nav class="versus-menu">
+      <ul>
+        <li><a href="#magic" class="menu-item">MAGIC</a></li>
+        <li><a href="#figures" class="menu-item">FIGURES</a></li>
+        <li><a href="#masks" class="menu-item">MASKS</a></li>
+        <li><a href="#stands" class="menu-item">STANDS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Carrossel de imagens -->
+  <section class="carrossel">
+    <div class="slider-container">
+      <div class="slider">
+        <img src="images/1.jpg" alt="Imagem 1" class="slide">
+        <img src="images/2.jpg" alt="Imagem 2" class="slide">
+        <img src="images/3.jpg" alt="Imagem 3" class="slide">
+        <img src="images/4.jpg" alt="Imagem 4" class="slide">
+        <img src="images/5.jpg" alt="Imagem 5" class="slide">
+        <img src="images/6.jpg" alt="Imagem 6" class="slide">
+      </div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </section>
+
+  <!-- Texto abaixo do carrossel -->
+  <section class="intro">
+    <h1>ESCOLHA SEU UNIVERSO 3D!</h1>
+    <p>Explore modelos incríveis de figuras, máscaras, mágica e suportes criativos!</p>
+  </section>
+
+  <!-- Seções principais -->
+  <main>
+    <section id="magic" class="grid-section">
+      <h2>MAGIC</h2>
+      <div class="card-grid">
+        <div class="card">Varinhas</div>
+        <div class="card">Runas</div>
+        <div class="card">Relíquias</div>
+      </div>
+    </section>
+
+    <section id="figures" class="grid-section">
+      <h2>FIGURES</h2>
+      <div class="card-grid">
+        <div class="card">Heróis</div>
+        <div class="card">Vilões</div>
+        <div class="card">Criaturas</div>
+      </div>
+    </section>
+
+    <section id="masks" class="grid-section">
+      <h2>MASKS</h2>
+      <div class="card-grid">
+        <div class="card">Sci-Fi</div>
+        <div class="card">Terror</div>
+        <div class="card">Clássicas</div>
+      </div>
+    </section>
+
+    <section id="stands" class="grid-section">
+      <h2>STANDS</h2>
+      <div class="card-grid">
+        <div class="card">Display para Action Figures</div>
+        <div class="card">Bases de Coleção</div>
+        <div class="card">Organizadores</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 LEO 3D - Criado com paixão geek e tecnologia 3D</p>
+  </footer>
+
+  <!-- Link para o JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
