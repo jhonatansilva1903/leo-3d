@@ -167,88 +167,107 @@
     color: #111;
     box-shadow: 0 0 20px #00f0ff;
   }
-  
-  /* Responsividade para dispositivos móveis */
-  @media screen and (max-width: 768px) {
-    /* Ajustes do cabeçalho */
-    .logo {
-      font-size: 1.5em;
-    }
-  
-    nav.versus-menu ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
-  
-    nav.versus-menu li {
-      display: block;
-      margin: 5px 0;
-    }
-  
-    .menu-item {
-      font-size: 1rem;
-      padding: 8px 15px;
-    }
-  
-    .intro h1 {
-      font-size: 2rem;
-    }
-  
-    .intro p {
-      font-size: 1.2rem;
-    }
-  
-    /* Ajuste do carrossel */
-    .carrossel-wrapper {
-      margin-top: 20px;
-    }
-  
-    .card-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .card {
-      font-size: 1rem;
-    }
+
+  /* Página Sobre Mim */
+.sobre-page {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  font-family: 'Minecraft', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.sobre-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.foto-perfil {
+  width: 180px;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid #00f0ff;
+  box-shadow: 0 0 15px #00f0ff80;
+}
+
+.descricao-artista {
+  max-width: 600px;
+}
+
+.descricao-artista h1 {
+  font-size: 2rem;
+  color: #00f0ff;
+  margin-bottom: 10px;
+}
+
+.descricao-artista p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+/* Página Sobre Mim */
+.sobre-page {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    font-family: 'Minecraft', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px;
   }
   
-  @media screen and (max-width: 480px) {
-    /* Ajustes de tamanho em telas pequenas */
-    .logo {
-      font-size: 1.2em;
-    }
-  
-    .intro h1 {
-      font-size: 1.5rem;
-    }
-  
-    .intro p {
-      font-size: 1rem;
-    }
-  
-    .card-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .card {
-      font-size: 1rem;
-    }
-  
-    /* Ajustar os botões do carrossel */
-    button.prev,
-    button.next {
-      font-size: 1.5em;
-    }
-  
-    /* Ajustes para os botões do menu no mobile */
-    .menu-item {
-      font-size: 1rem;
-      padding: 8px 15px;
-    }
-  
-    nav.versus-menu ul {
-      padding-left: 0;
-    }
+  .sobre-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
   }
+  
+  .foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #00f0ff;
+    box-shadow: 0 0 15px #00f0ff80;
+  }
+  
+  .descricao-artista {
+    max-width: 600px;
+  }
+  
+  .descricao-artista h1 {
+    font-size: 2rem;
+    color: #00f0ff;
+    margin-bottom: 10px;
+  }
+  
+  .descricao-artista p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  .botao-voltar {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #00f0ff;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00f0ff80;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .botao-voltar:hover {
+    background-color: #00c2d4;
+    transform: scale(1.05);
+  }
+  
   
