@@ -8,16 +8,23 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/card.css" />
   <link href="https://fonts.googleapis.com/css2?family=Minecraft&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Fontes adicionais se necessário -->
 </head>
 
 <body>
+  <!-- Vanta.js e Three.js para o fundo animado -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
   <!-- Botão de Voltar ao topo -->
   <button id="voltar-topo" title="Voltar ao topo" style="display: none;">↑</button>
 
   <header>
-    <div class="title">🕹️ Leonardo Luciano - Artista 3D 🕹️</div>
+    <div class="title">🕹️ Leonardo Luciano 🕹️</div>
     <nav class="versus-menu">
       <ul>
+        <li><a href="figures.html" class="menu-item">FIGURES</a></li>
         <li><a href="https://wa.me/554796287063" class="menu-item" target="_blank">ORÇAMENTOS</a></li>
         <li><a href="https://www.instagram.com/leoldsg/" class="menu-item" target="_blank">INSTAGRAM</a></li>
         <li><a href="sobre.html" class="menu-item">SOBRE MIM</a></li>
@@ -37,12 +44,13 @@
     <section class="carrossel">
       <div class="slider-container">
         <div class="slider">
-          <img src="imagens/imagem  (1).jpeg" alt="Imagem 1" class="slide">
-          <img src="imagens/imagem  (2).jpeg" alt="Imagem 2" class="slide">
-          <img src="imagens/imagem  (3).jpeg" alt="Imagem 3" class="slide">
-          <img src="imagens/imagem  (4).jpeg" alt="Imagem 4" class="slide">
-          <img src="imagens/imagem  (4).jpeg" alt="Imagem 5" class="slide">
-          <img src="imagens/imagem  (5).jpeg" alt="Imagem 6" class="slide">
+          <img src="imagens/1.jpg" alt="Imagem 1" class="slide">
+          <img src="imagens/2.jpg" alt="Imagem 2" class="slide">
+          <img src="imagens/3.jpg" alt="Imagem 3" class="slide">
+          <img src="imagens/4.jpg" alt="Imagem 4" class="slide">
+          <img src="imagens/5.jpg" alt="Imagem 5" class="slide">
+          <img src="imagens/6.jpg" alt="Imagem 6" class="slide">
+          <img src="imagens/7.jpg" alt="Imagem 7" class="slide">
         </div>
       </div>
       <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -57,43 +65,45 @@
       <div class="card-grid">
         <div class="card">Miniaturas</div>
         <div class="card">Figures</div>
+        <div class="card">Protótipos</div>
         <div class="card">Deckbox</div>
+        <div class="card">Dados</div>
       </div>
     </section>
 
     <section id="figures" class="grid-section">
-      <h2>FIGURES</h2>
+      <h2>FILAMENTOS</h2>
       <div class="card-grid">
-        <div class="card">Heróis</div>
-        <div class="card">Vilões</div>
-        <div class="card">Criaturas</div>
-      </div>
-    </section>
-
-    <section id="masks" class="grid-section">
-      <h2>MASKS</h2>
-      <div class="card-grid">
-        <div class="card">Sci-Fi</div>
-        <div class="card">Terror</div>
-        <div class="card">Oni</div>
-      </div>
-    </section>
-
-    <section id="stands" class="grid-section">
-      <h2>STANDS</h2>
-      <div class="card-grid">
-        <div class="card">Display para Action Figures</div>
-        <div class="card">Bases de Coleção</div>
+        <div class="card">Deckbox</div>
         <div class="card">Organizadores</div>
+        <div class="card">Diversos</div>
       </div>
     </section>
+  </main>
+
   <!-- Rodapé -->
   <footer>
-    <p>&copy; 2025 LEO 3D - Criado com paixão geek e tecnologia 3D</p>
+    <p>&copy; 2025 LEONARDO LUCIANO 3D - Criado com paixão geek e tecnologia 3D</p>
   </footer>
 
   <!-- Link para o JavaScript -->
   <script src="script.js"></script>
+
+  <!-- Vanta.js Script -->
+  <script>
+    VANTA.NET({
+      el: "body",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x00f0ff,
+      backgroundColor: 0x0f0f0f
+    });
+  </script>
 </body>
 
 </html>
